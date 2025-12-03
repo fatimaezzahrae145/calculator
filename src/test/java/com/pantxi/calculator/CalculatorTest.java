@@ -1,18 +1,30 @@
 package com.pantxi.calculator;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.AfterEach;
 public class CalculatorTest {
+    private Calculator calc;
+    @BeforeEach
+    public void setup(){
+        calc = new Calculator();
+        System.out.println("Declaration");
+    }
+    @AfterEach
+    public void teardown(){
+        calc = null;
+        System.out.println("Detruire");
+    }
     @Test
     public void Addition() {
-        Calculator calcul = new Calculator();
-        int result = calcul.add(2, 3);
-        assertEquals(5, result, "2 + 3 doit être égal à 5");
+
+
+        assertEquals(7,calc.add(4,3));
     }
     @Test
     public void Division() {
-        Calculator calcul = new Calculator();
-        int result = calcul.divide(8, 2);
-        assertEquals(4, result, "8/2 doit être égal à 4");
+
+        assertEquals(50,calc.divide(100,2));
     }
 
 
