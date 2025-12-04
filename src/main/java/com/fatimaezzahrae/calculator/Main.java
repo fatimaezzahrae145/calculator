@@ -1,4 +1,4 @@
-package com.pantxi.calculator;
+package com.fatimaezzahrae.calculator;
 
 public class Main {
 
